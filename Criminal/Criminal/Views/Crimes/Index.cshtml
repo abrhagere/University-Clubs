@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Criminal.Models.Crime>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CrimeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CrimeDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CrimeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CrimeDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CrimId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CrimId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CrimId })
+        </td>
+    </tr>
+}
+
+</table>

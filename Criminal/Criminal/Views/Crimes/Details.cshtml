@@ -1,0 +1,34 @@
+﻿@model Criminal.Models.Crime
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Crime</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CrimeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CrimeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CrimeDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CrimeDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CrimId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

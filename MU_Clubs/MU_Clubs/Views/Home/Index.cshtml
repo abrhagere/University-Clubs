@@ -1,0 +1,40 @@
+﻿
+@if (User.Identity.IsAuthenticated)
+{
+
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+@if (User.Identity.IsAuthenticated)
+{
+    <h1>
+        Wel-come to your dash-board!
+    </h1>
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    <div class="jumbotron">
+        <h1>MU Clubs Management System</h1>
+        <p class="lead">Well-Come To Mekelle Uiversity</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>
+                University Clubs are defined as a collection of voluntary personals with some specified mission and goal to serve some specific community. When we come to Mekelle University the concept is not that much far away from this. Normally Mekelle University (MU) has different extracurricular activities that needed to be handled by students themselves in order to create a strong linkage between students and the campus management. The ultimate goal is to create a working environment for the university community and creating nationwide developmental contribution. But even though there are many clubs formed in MU the tasks, activities and duties given to the clubs are not well-managed and there is a poor communication and controlling mechanism. Having weak control of the club’s reports and 
+                timely management of their respective tasks is the main cause for the problems exists.
+            </p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
+    </div>}
